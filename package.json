@@ -2,7 +2,6 @@
   "name": "typescript-challenge-backend",
   "description": "Targomo Typescript Challenge Back End",
   "version": "1.0.0",
-  "type": "module",
   "homepage": "https://targomo.com",
   "main": "src",
   "repository": {

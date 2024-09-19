@@ -1,12 +1,12 @@
-import tsEslintPlugin from '@typescript-eslint/eslint-plugin'
-import tsEslintParser from '@typescript-eslint/parser'
-import jest from 'eslint-plugin-jest'
-import noOnlyTests from 'eslint-plugin-no-only-tests'
-import prettierEslint from 'prettier-eslint'
+const tsEslintPlugin = require('@typescript-eslint/eslint-plugin')
+const tsEslintParser = require('@typescript-eslint/parser')
+const jest = require('eslint-plugin-jest')
+const noOnlyTests = require('eslint-plugin-no-only-tests')
+const prettierEslint = require('prettier-eslint')
 
-export default [
+module.exports = [
   {
-    files: ['**/*.ts', '**/*.js'],
+    files: ['*.ts', '*.js'],
     languageOptions: {
       parser: tsEslintParser,
       ecmaVersion: 'latest',
@@ -21,6 +21,12 @@ export default [
       '@typescript-eslint/no-empty-function': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error'],
+    },
+  },
+  {
+    files: ['*.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
   {

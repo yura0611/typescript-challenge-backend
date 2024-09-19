@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   verbose: false,
   moduleFileExtensions: ['ts', 'js', 'json'],
   testMatch: ['**/?(*.)(spec).(ts|js)?(x)'],
