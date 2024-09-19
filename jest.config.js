@@ -1,10 +1,9 @@
-module.exports = {
+export default {
   verbose: false,
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  moduleFileExtensions: ['ts', 'js', 'json'],
   testMatch: ['**/?(*.)(spec).(ts|js)?(x)'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
   collectCoverageFrom: ['src/**/*.{ts,js}', '!<rootDir>/node_modules/', '!src/__tests__/**/*', '!src/index.ts'],
-  moduleDirectories: ['node_modules', '.'],
+  moduleDirectories: ['node_modules', '<rootDir>'],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
 }

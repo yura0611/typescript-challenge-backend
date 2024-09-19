@@ -1,12 +1,17 @@
 export interface TransitStop {
   name: string
-  stopId: string
+  id: string
   lat: number
   lng: number
-  prevStopId: string
-  nextStopId: string
+  prevId: string
+  nextId: string
   peopleOn: number
   peopleOff: number
   reachablePopulationWalk: number
   reachablePopulationBike: number
+}
+
+export interface TransitLine {
+  id: string
+  stops: TransitStop[]
 }
