@@ -1,9 +1,8 @@
 import { Router } from 'express'
 import { getLine } from './get-line'
-import { validateLineId } from './validate-lineid'
 
 export const transitLinesRouter = Router()
 
-transitLinesRouter.get('/:lineId', validateLineId, getLine)
+transitLinesRouter.get('/:lineId', getLine)
 
 // TODO add CRUD methods
