@@ -2,6 +2,7 @@ export interface TransitStop {
   name: string
   id: string
   lat: number
+  lineId?: string
   lng: number
   prevId: string
   nextId: string

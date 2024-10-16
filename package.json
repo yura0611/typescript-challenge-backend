@@ -22,9 +22,15 @@
     "prettier": "prettier --write --config .prettierrc.json 'src/**/*{.js,.ts}'"
   },
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/sequelize": "^4.28.20",
+    "@types/sqlite3": "^3.1.11",
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.0",
     "morgan": "^1.10.0",
+    "sequelize": "^6.37.4",
+    "sqlite3": "^5.1.7",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {

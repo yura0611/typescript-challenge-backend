@@ -1,10 +1,23 @@
 import { app } from './app'
 import { EXPRESS_PORT } from './config'
+import { sequelize } from './config/database'
 
-const SERVICE_NAME = '<put a cool name here>'
+const SERVICE_NAME = 'awesome-transit-lines-service'
 
-console.log(`Starting ${SERVICE_NAME}`)
+async function main() {
+  try {
+    await sequelize.sync({ force: true })
 
-app.listen(EXPRESS_PORT, () => {
-  console.log(`${SERVICE_NAME} listening on port ${EXPRESS_PORT}`)
-})
+    console.log('Database synced!')
+
+    console.log(`Starting ${SERVICE_NAME}`)
+
+    app.listen(EXPRESS_PORT, () => {
+      console.log(`${SERVICE_NAME} listening on port ${EXPRESS_PORT}`)
+    })
+  } catch (error) {
+    console.error('Unable to connect to the database:', error)
+  }
+}
+
+main()
